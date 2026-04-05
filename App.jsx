@@ -1,12 +1,12 @@
 // src/App.jsx
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from './hooks/useAuth';
-import { ToastProvider } from './hooks/useToast';
+import { AuthProvider, useAuth } from 'useAuth';
+import { ToastProvider } from 'useToast';
 
-import LandingPage from './pages/LandingPage';
-import LoginPage from './pages/LoginPage';
-import OperatorDashboard from './pages/OperatorDashboard';
-import CitizenDashboard from './pages/CitizenDashboard';
+import LandingPage from 'LandingPage';
+import LoginPage from 'LoginPage';
+import OperatorDashboard from 'OperatorDashboard';
+import CitizenDashboard from 'CitizenDashboard';
 
 function ProtectedRoute({ children, role }) {
   const { user, isAuthenticated } = useAuth();
